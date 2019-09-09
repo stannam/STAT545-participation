@@ -8,3 +8,10 @@ https://github.com/STAT545-UBC/
 
 The account is an organization account.
 
+The URL to my participation repo:
+
+https://github.com/stannam/STAT545-participation
+
+The URL to my user account page:
+
+https://github.com/stannam
