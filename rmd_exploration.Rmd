@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+author: "Stanley Nam"
+date: "September 10, 2019"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    theme: cerulean
+---
+YAML header can further specify how the output should look. e.g., with toc. if so, html_document: instead of html_document (without colon)
+
+```{r load, warning = FALSE, echo = FALSE}
+library(tibble)
+library(gapminder)
+library(DT)
+```
+
+## print out gapminder data:
+
+```{r}
+gapminder
+```
+
+<!-- This is a comment! -->
+
+Convert mtcars to a tibble, and wrap in datatable:
+
+```{r}
+datatable(as_tibble(mtcars))
+# 'DT::datatable' without explicitly loading the whole datatable package
+```
+
