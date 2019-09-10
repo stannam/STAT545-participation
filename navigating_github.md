@@ -1,12 +1,15 @@
-The URL to the repository for the STAT 545 home page (STAT545-home):
+# Helpful Links
 
-https://github.com/STAT545-UBC/STAT545-home
+
+The URL to the repository for the __STAT 545 home page__ (STAT545-home):
+
+[STAT 545 Home](https://github.com/STAT545-UBC/STAT545-home)
 
 It is under the following account:
 
 https://github.com/STAT545-UBC/
 
-The account is an organization account.
+The account is an _organization_ account.
 
 The URL to my participation repo:
 
