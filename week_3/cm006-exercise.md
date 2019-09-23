@@ -326,8 +326,6 @@ arrange(select(gapminder, year, lifeExp, country), year, lifeExp) # before: nest
 gapminder %>%
     select(year, lifeExp, country) %>%
     arrange(year, lifeExp)                                  # after: using pipes
-=======
->>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 ```
@@ -345,32 +343,6 @@ gapminder %>%
 ##  9  1952    33.0 Somalia      
 ## 10  1952    33.6 Guinea       
 ## # ... with 1,694 more rows
-<<<<<<< HEAD
-=======
-```
-
-```r
-gapminder %>%
-    select(year, lifeExp, country) %>%
-    arrange(year, lifeExp)                                  # after: using pipes
-```
-
-```
-## # A tibble: 1,704 x 3
-##     year lifeExp country      
-##    <int>   <dbl> <fct>        
-##  1  1952    28.8 Afghanistan  
-##  2  1952    30   Gambia       
-##  3  1952    30.0 Angola       
-##  4  1952    30.3 Sierra Leone 
-##  5  1952    31.3 Mozambique   
-##  6  1952    32.0 Burkina Faso 
-##  7  1952    32.5 Guinea-Bissau
-##  8  1952    32.5 Yemen, Rep.  
-##  9  1952    33.0 Somalia      
-## 10  1952    33.6 Guinea       
-## # ... with 1,694 more rows
->>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 # Resume lecture 
