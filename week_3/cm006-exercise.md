@@ -302,6 +302,7 @@ Now using with pipes:
 ```r
 # alter the below to include 2 "pipes"
 arrange(select(gapminder, year, lifeExp, country), year, lifeExp) # before: nesting
+<<<<<<< HEAD
 ```
 
 ```
@@ -325,6 +326,8 @@ arrange(select(gapminder, year, lifeExp, country), year, lifeExp) # before: nest
 gapminder %>%
     select(year, lifeExp, country) %>%
     arrange(year, lifeExp)                                  # after: using pipes
+=======
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 ```
@@ -342,6 +345,32 @@ gapminder %>%
 ##  9  1952    33.0 Somalia      
 ## 10  1952    33.6 Guinea       
 ## # ... with 1,694 more rows
+<<<<<<< HEAD
+=======
+```
+
+```r
+gapminder %>%
+    select(year, lifeExp, country) %>%
+    arrange(year, lifeExp)                                  # after: using pipes
+```
+
+```
+## # A tibble: 1,704 x 3
+##     year lifeExp country      
+##    <int>   <dbl> <fct>        
+##  1  1952    28.8 Afghanistan  
+##  2  1952    30   Gambia       
+##  3  1952    30.0 Angola       
+##  4  1952    30.3 Sierra Leone 
+##  5  1952    31.3 Mozambique   
+##  6  1952    32.0 Burkina Faso 
+##  7  1952    32.5 Guinea-Bissau
+##  8  1952    32.5 Yemen, Rep.  
+##  9  1952    33.0 Somalia      
+## 10  1952    33.6 Guinea       
+## # ... with 1,694 more rows
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 # Resume lecture 
@@ -404,6 +433,7 @@ gapminder %>%
 ```r
 gapminder %>%
   filter(pop > 100000000 & continent == "Asia")
+<<<<<<< HEAD
 ```
 
 ```
@@ -427,6 +457,8 @@ gapminder %>%
 gapminder %>%
   filter(pop > 100000000,
          continent == "Asia")
+=======
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 ```
@@ -444,6 +476,32 @@ gapminder %>%
 ##  9 China      Asia       1967    58.4 754550000      613.
 ## 10 China      Asia       1972    63.1 862030000      677.
 ## # ... with 42 more rows
+<<<<<<< HEAD
+=======
+```
+
+```r
+gapminder %>%
+  filter(pop > 100000000,
+         continent == "Asia")
+```
+
+```
+## # A tibble: 52 x 6
+##    country    continent  year lifeExp       pop gdpPercap
+##    <fct>      <fct>     <int>   <dbl>     <int>     <dbl>
+##  1 Bangladesh Asia       1987    52.8 103764241      752.
+##  2 Bangladesh Asia       1992    56.0 113704579      838.
+##  3 Bangladesh Asia       1997    59.4 123315288      973.
+##  4 Bangladesh Asia       2002    62.0 135656790     1136.
+##  5 Bangladesh Asia       2007    64.1 150448339     1391.
+##  6 China      Asia       1952    44   556263527      400.
+##  7 China      Asia       1957    50.5 637408000      576.
+##  8 China      Asia       1962    44.5 665770000      488.
+##  9 China      Asia       1967    58.4 754550000      613.
+## 10 China      Asia       1972    63.1 862030000      677.
+## # ... with 42 more rows
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ```
 
 3. Repeat 2, but take data from countries Brazil, and China. 
@@ -479,6 +537,7 @@ gapminder %>%
 ## 18 China   Asia       1997    70.4 1230075000     2289.
 ## 19 China   Asia       2002    72.0 1280400000     3119.
 ## 20 China   Asia       2007    73.0 1318683096     4959.
+<<<<<<< HEAD
 ```
 
 ```r
@@ -516,9 +575,51 @@ gapminder %>%
 gapminder %>%
   filter(pop > 100000000,
          country == "Brazil" | country == "China")
+=======
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
+```
+
+```r
+gapminder %>%
+  filter(pop > 100000000 & (country == "Brazil" | country == "China"))
 ```
 
 ```
+## # A tibble: 20 x 6
+##    country continent  year lifeExp        pop gdpPercap
+##    <fct>   <fct>     <int>   <dbl>      <int>     <dbl>
+##  1 Brazil  Americas   1972    59.5  100840058     4986.
+##  2 Brazil  Americas   1977    61.5  114313951     6660.
+##  3 Brazil  Americas   1982    63.3  128962939     7031.
+##  4 Brazil  Americas   1987    65.2  142938076     7807.
+##  5 Brazil  Americas   1992    67.1  155975974     6950.
+##  6 Brazil  Americas   1997    69.4  168546719     7958.
+##  7 Brazil  Americas   2002    71.0  179914212     8131.
+##  8 Brazil  Americas   2007    72.4  190010647     9066.
+##  9 China   Asia       1952    44    556263527      400.
+## 10 China   Asia       1957    50.5  637408000      576.
+## 11 China   Asia       1962    44.5  665770000      488.
+## 12 China   Asia       1967    58.4  754550000      613.
+## 13 China   Asia       1972    63.1  862030000      677.
+## 14 China   Asia       1977    64.0  943455000      741.
+## 15 China   Asia       1982    65.5 1000281000      962.
+## 16 China   Asia       1987    67.3 1084035000     1379.
+## 17 China   Asia       1992    68.7 1164970000     1656.
+## 18 China   Asia       1997    70.4 1230075000     2289.
+## 19 China   Asia       2002    72.0 1280400000     3119.
+## 20 China   Asia       2007    73.0 1318683096     4959.
+```
+<<<<<<< HEAD
+=======
+
+```r
+gapminder %>%
+  filter(pop > 100000000,
+         country == "Brazil" | country == "China")
+```
+
+```
+>>>>>>> b3dce2fa5bf55c70f1e800289d0b925f6af339e9
 ## # A tibble: 20 x 6
 ##    country continent  year lifeExp        pop gdpPercap
 ##    <fct>   <fct>     <int>   <dbl>      <int>     <dbl>
