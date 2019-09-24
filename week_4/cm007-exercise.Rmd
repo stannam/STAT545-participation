@@ -43,7 +43,11 @@ group_by(country) %>%
 ```
 
 ```{r}
-
+gapminder %>% 
+  group_by(country) %>%
+  arrange(year) %>% 
+  mutate(rel_growth = pop - first(pop)) %>% 
+  DT::datatable()
 ```
 
 
@@ -63,7 +67,17 @@ knitr::kable()
 ```
 
 ```{r}
+gapminder %>% 
+  group_by(country) %>% 
+  arrange(year) %>% 
+  mutate(inc_life_exp = difference(lifeExp)) %>% 
+  drop_na() %>% 
+  ungroup() %>% 
+  # first phase ends here (calculating increase in lifeExp by country and create a new column inc_life_exp).
+  group_by(continent) %>% 
+  filter(inc_life_exp == min(inc_life_exp)) %>% 
+  arrange(inc_life_exp) %>% 
+  # second phase ends here (in each continent, present the country with the lowest inc_life_exp).
+  knitr::kable()
 
 ```
-
-
