@@ -84,7 +84,7 @@ guest_long %>%
 4. Which parties still have a "PENDING" status for all members for the wedding?
 
 ```{r}
-guest %>% # tibble 'guest' has different columns for each event
+guest %>% # tibble 'guest' has different columns for each event.
   group_by(party) %>% 
   summarize(pending_wedding = all(attendance_wedding == "PENDING"))
 ```
